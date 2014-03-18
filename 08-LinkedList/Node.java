@@ -24,4 +24,8 @@ public class Node{
     public Node getNext(){
 	return next;
     }
+
+    public String toString(){
+	return "Data: "+data;//+" Next: "+next;
+    }
 }
