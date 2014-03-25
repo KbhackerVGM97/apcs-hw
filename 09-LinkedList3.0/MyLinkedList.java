@@ -9,6 +9,7 @@ public class MyLinkedList{
     public MyLinkedList(){
 		head = new Node("dummy"); 
 		length = 0;
+		tail = head
     }
 
     public String toString(){
@@ -22,14 +23,24 @@ public class MyLinkedList{
 		return ans;
     }
 
+	public void add(String s){
+		tmp = new Node(s);
+		tmp.setNext(tail.getNext());
+		tail.setNext(tmp);
+		length++;
+	}
+	
     public void add (int i, String s){
+		if (i==length)
+			add(s);
+		else{
 		Node n= head;
 		Node tmp = new Node(s);
 		for (int j = 0; j < i; j++)
 			n = n.getNext();
 		tmp.setNext(n.getNext());
 		n.setNext(tmp);
-		length ++;
+		length ++;}
 	}
 
     public int length(){
