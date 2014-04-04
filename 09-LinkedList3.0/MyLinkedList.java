@@ -1,10 +1,14 @@
 import java.io.*;
 import java.util.*;
 
-public class MyLinkedList{
+public class MyLinkedList<E> implements Iterable{
 
     private Node head, tail;
     private int length;
+
+    public Iterator<E> iterator(){
+	//make and return a new iterator for the linked list
+    }
     
     public MyLinkedList(){
 		head = new Node("dummy"); 
@@ -23,14 +27,14 @@ public class MyLinkedList{
 		return ans;
     }
 
-	public void add(String s){
+	public void add(E s){
 		tmp = new Node(s);
 		tmp.setNext(tail.getNext());
 		tail.setNext(tmp);
 		length++;
 	}
 	
-    public void add (int i, String s){
+    public void add (int i,E s){
 		if (i==length)
 			add(s);
 		else{
@@ -66,7 +70,7 @@ public class MyLinkedList{
 		return ans;
 	}
 
-    public String set(int i, String s){
+    public String set(int i, E s){
 		Node n = getNode(i);
 		n.getNext().setData(s);
 		return n.getNext().getData();
