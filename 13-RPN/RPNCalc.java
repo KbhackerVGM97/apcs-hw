@@ -25,7 +25,7 @@ public class RPNCalc{
 					data.push(Integer.parseDouble(lastln));
 				}
 				catch(Exception e){
-					System.out.println("You Fucked Up Nigga");
+					System.out.println("Whoops");
 				}
 			}
 			
