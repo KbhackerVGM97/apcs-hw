@@ -1,0 +1,5 @@
+Tree deletion
+
+replace yhe deleted value with the largest from the left subtree or the smallest from the right subtree
+
+do a delete on the node you copied
