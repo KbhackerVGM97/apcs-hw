@@ -1,7 +1,7 @@
 public class BinarySearchTree{
     private Node root;
 	
-	public BST(){
+	public BinarySearchTree(){
 		root=null;
 	}
 	
@@ -118,4 +118,27 @@ public class BinarySearchTree{
 			//how to remove root effectively?!?!
 		}
 	}
+
+	public void print(){
+		if(root == null)
+			System.out.println("null tree");
+		else
+			print(root);
+	}
+
+	private void print(Node n){
+		if (n==null)
+			return;
+		else{
+			print(n.getLeft());
+			System.out.println(n.getData());
+			print(n.getRight());	
+		}
+	}
+
+	/*
+	pre order traversal
+	in order traversal
+	post oreder traversal
+	*/
 }
