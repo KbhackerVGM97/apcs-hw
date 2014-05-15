@@ -1,0 +1,25 @@
+1)
+TreeMap -	
+	implements the Map interface, allowing it to map objects to keys. Mainta	ins order and is iterable, but costs nlogn performance.
+	
+TreeSet- 
+	implements the Set interface (like a mathematical set, so there are no		duplicate items, and it it s made from a treemap (under the hood).
+
+HashMap-
+	simmilar to a treemap, and implements Map. offers contant time operation	s at the cost of not being an ordered set.
+
+HashSet-
+	simmilar to TreeSet, offering speed wihout being sorted.
+
+2)
+speed tests:
+(code in SpeedTest.java)
+
+HashMap:
+TreeMap:
+
+3) Does java have a built in heap?
+
+yes, but it is called a priorityqueue and organizes by priority value.
+
+
