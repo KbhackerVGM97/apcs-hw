@@ -50,10 +50,12 @@ public class MedianStuff{
     }
     
     public double removeMedian(){
+	reclaibrateMedian();
 	if (even)
 	    return (top.poll()+bottom.poll())/2.0;
 	else if (top.size()>bottom.size())
 	    return top.poll();
-	else if ()
+	else 
+	    return bottom.poll();
     }
 }
